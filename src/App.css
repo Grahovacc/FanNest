@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box; /* Include padding and border in width calculations */
+}
+body {
+  background: linear-gradient(135deg, #1e003a, #3b006d, #6100c0, #ac00db);
+  background-size: 150% 150%; /* Larger background size for animation */
+  animation: gradientAnimation 15s ease infinite; /* Smooth animation */
+  min-height: 100vh;
+  color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20px;
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+@media (max-width: 1px) {
+  .container {
+    margin-left: 10%;  /* Adjust left margin for the whole container */
+    margin-right: 10%; /* Adjust right margin for the whole container */
+  }
+  .wallet-connection-container{
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .header{
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .auth-buttons {
+    margin-left: 0%;  /* Ensure the auth-buttons div is centered */
+    margin-right: 20%; /* Ensure the auth-buttons div is centered */
+  }
+
+  .modern-btn {
+    margin-left: auto; /* Center the button if needed */
+    margin-right: auto; /* Center the button if needed */
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  max-width: 1400px; /* Optional: Set a max-width to contain content */
+}
+
+/* Header */
+.header {
+  width: 100vw; /* Full width */
+  max-width: 100%; /* Ensure no overflow */
+  background-color: transparent;
+  display: flex;
+  border-radius: 25px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px; /* Add some padding for better look */
+  margin-bottom: 30px;
+}
+
+/* Global Button Styles */
+button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  background-color: #915bff; /* Purple background */
+  color: #ffffff; /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none; /* Remove default outline */
+}
+
+button:hover {
+  background-color: #7a4bd6; /* Darker purple on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+button:focus {
+  outline: none; /* Remove default outline */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e0b3ff;
+}
+
+nav {
+  display: flex; /* Default to flex layout */
+  align-items: center; /* Center items vertically */
+}
+
+nav a {
+  margin: 0 20px; /* Add horizontal spacing */
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Modern Button Styles */
+.modern-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  background-color: #915bff; /* Purple background */
+  color: #ffffff; /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none; /* Remove outline */
+}
+
+/* Button Hover Effect */
+.modern-btn:hover {
+  background-color: #7a4bd6; /* Darker purple on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Remove focus outline */
+.modern-btn:focus {
+  outline: none; /* Ensures no outline on focus */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #b69cff;
+}
+
+.hero-content p {
+  margin-top: 15px;
+  color: #bbb;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.hero-buttons .cta,
+.hero-buttons .github {
+  background-color: #915bff;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero-buttons .github {
+  background-color: #333;
+}
+
+/* Hero Image */
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Add styles for the hamburger menu */
+.hamburger {
+  display: none; /* Hide by default */
+  font-size: 24px;
+  color: #ffffff; /* White color for icon */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile navigation styles */
+.navbar {
+  display: flex; /* Default is flex for larger screens */
+  align-items: center; /* Center items vertically */
+}
+
+.navbar.open {
+  display: flex; /* Show as flex when open */
+  flex-direction: column; /* Stack items vertically */
+  position: absolute; /* Overlay on top of content */
+  top: 100px; /* Position below header */
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #1e003a, #3b006d, #6100c0);
+  padding: 20px 0;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.navbar.open:hover {
+  background-color: #b8a5df; /* Darker purple on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.navbar a {
+  display: block; /* Stack links vertically */
+  margin: 10px 33px; /* Space between links */
+}
+.account-info {
+  position: relative;
+  display: inline-block;
+}
+
+.account-info-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  background-color: #241249; /* Purple background */
+  color: #ffffff; /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none; /* Remove outline */
+} 
+
+/* Tooltip styling */
+.account-tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+  position: absolute;
+  top: 125%; /* Position below button */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  max-width: 200px; /* Limit width for truncation */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis (...) */
+}
+
+/* Tooltip arrow */
+.account-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%; /* Arrow pointing up */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+}
+
+
+/* Show tooltip on hover */
+.account-info-btn:hover + .account-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Media query to adjust tooltip for smaller screens */
+@media (max-width: 480px) {
+  .account-tooltip {
+    font-size: 12px; /* Smaller font for tooltip */
+    padding: 4px 6px;
+    max-width: 80vw; /* Constrain width to avoid overflow */
+    white-space: normal; /* Allow text to wrap if needed */
+  }
+}
+
+
+
+
+/* Media query for mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger icon on mobile */
+  }
+  .wallet-connection-container{
+    display: none;
+  }
+  .navbar {
+    display: none; /* Hide navbar by default on mobile */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Full width for mobile */
+  }
+}
+
