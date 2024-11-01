@@ -13,7 +13,7 @@ body {
   justify-content: center;
   padding-top: 20px;
   margin: 0;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden; 
   background-color: #370664; /* Fallback color */
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%236100c0" fill-opacity="1" d="M0,200 C150,300 350,100 500,200 C650,300 850,100 1000,200 C1150,300 1350,100 1440,200 L 1440,320 L 0,320 Z"></path></svg>');
   background-size: cover; /* Cover the entire area */
