@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import PolkadotWalletConnect from "./PolkadotWalletConnect"; 
+import computerImg from "./assets/computer_img.png"; // Adjust the path if necessary
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,9 +23,8 @@ function App() {
         <div className="auth-buttons">
           <div className="Connect-btn"><PolkadotWalletConnect /></div>
         </div>
-        {}
         <button className="hamburger" onClick={toggleMenu}>
-          &#9776; {}
+          &#9776;
         </button>
       </header>
 
@@ -41,10 +41,10 @@ function App() {
             <button className="github">Contact Us</button>
           </div>
         </div>
-        <div className="hero-image">
-        </div>
-      </main>
 
+        {/* Separate image element positioned to the right */}
+        <img src={computerImg} alt="Computer" className="computer-img" />
+      </main>
     </div>
   );
 }

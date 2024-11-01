@@ -37,7 +37,7 @@ body {
     margin-left: 0%;  /* Ensure the auth-buttons div is centered */
     margin-right: 20%; /* Ensure the auth-buttons div is centered */
   }
-
+  
   .modern-btn {
     margin-left: auto; /* Center the button if needed */
     margin-right: auto; /* Center the button if needed */
@@ -48,8 +48,15 @@ body {
   width: 100%;
   padding: 0 20px;
   max-width: 1400px; /* Optional: Set a max-width to contain content */
+  margin: 0 auto; /* Center the container */
+  box-sizing: border-box; /* Include padding in width */
 }
-
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
+    padding: 0 10px; /* Add smaller padding for mobile */
+  }
+}
 /* Header */
 .header {
   width: 100vw; /* Full width */
@@ -60,7 +67,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px; /* Add some padding for better look */
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* Global Button Styles */
@@ -138,6 +145,9 @@ nav a {
 
 .hero-content {
   max-width: 600px;
+  word-wrap: break-word; /* Ensures long words wrap within the container */
+  overflow-wrap: break-word; /* Ensures long words wrap within the container (alternative for compatibility) */
+  margin-top: -100px;
 }
 
 .hero-content h1 {
@@ -174,11 +184,35 @@ nav a {
 }
 
 /* Hero Image */
-.hero-image img {
-  width: 100%;
-  max-width: 400px;
+.computer-img {
+  max-width: 600px; /* Adjust the size as needed */
   border-radius: 10px;
+  margin-left: 20px; /* Add space between text and image */
 }
+
+
+/* Media Query for Responsive Design */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Center items */
+    margin-left: 0; /* Remove left margin on mobile */
+  }
+
+  .hero-content {
+    max-width: 100%; /* Allow full width on mobile */
+    text-align: flex-start; /* Center the text */
+    margin-top: 0; /* Remove top margin */
+    padding: 0 15px; /* Add horizontal padding */
+  }
+
+  .computer-img {
+    margin-top: 20px; /* Add some space above the image */
+    max-width: 80%; /* Adjust size for mobile */
+    align-items: flex-start;
+  }
+}
+
 
 /* Add styles for the hamburger menu */
 .hamburger {
