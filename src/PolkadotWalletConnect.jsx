@@ -57,6 +57,8 @@ const PolkadotWalletConnect = () => {
           <span className="account-tooltip">{selectedAccount}</span>
         </div>
       )}
+      <div className='accAdress'>
+      </div>
     </div>
   );
 };

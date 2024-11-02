@@ -8,16 +8,17 @@ body {
   animation: gradientAnimation 15s ease infinite; 
   min-height: 100vh;
   color: #ffffff;
-  display: flex;
+  display: block;
   align-items: flex-start;
-  justify-content: center;
   padding-top: 20px;
   margin: 0;
   overflow-x: hidden; 
-  background-color: #3d076e; /* Fallback color */
+  background-color: #3d076e; 
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%236100c0" fill-opacity="1" d="M0,200 C150,300 350,100 500,200 C650,300 850,100 1000,200 C1150,300 1350,100 1440,200 L 1440,320 L 0,320 Z"></path></svg>');
-  background-size: cover; /* Cover the entire area */
+  background-size: cover; 
   background-repeat: no-repeat;
+  overflow: hidden;
+
 }
 
 @media (max-width: 1px) {
@@ -50,7 +51,13 @@ body {
   max-width: 1400px; /* Optional: Set a max-width to contain content */
   margin: 0 auto; /* Center the container */
   box-sizing: border-box; /* Include padding in width */
+  margin-top: 0; /* Default position */
 }
+
+.menu-open .container {
+  margin-top: 0; /* Adjust as necessary to match your header height */
+}
+
 @media (max-width: 768px) {
   .container {
     max-width: 100%; /* Ensure it doesn't exceed the screen width */
@@ -99,16 +106,6 @@ button:focus {
   color: #e0b3ff;
 }
 
-nav {
-  display: flex; /* Default to flex layout */
-  align-items: center; /* Center items vertically */
-}
-
-nav a {
-  margin: 0 20px; /* Add horizontal spacing */
-  text-decoration: none;
-  color: #ffffff;
-}
 
 /* Modern Button Styles */
 .modern-btn {
@@ -185,7 +182,7 @@ nav a {
 
 /* Hero Image */
 .computer-img {
-  max-width: 600px; /* Adjust the size as needed */
+  max-width: 35%; /* Adjust the size as needed */
   border-radius: 10px;
   margin-left: 20px; /* Add space between text and image */
 }
@@ -213,44 +210,105 @@ nav a {
   }
 }
 
-
-/* Add styles for the hamburger menu */
-.hamburger {
-  display: none; /* Hide by default */
-  font-size: 24px;
-  color: #ffffff; /* White color for icon */
-  background: none;
-  border: none;
-  cursor: pointer;
+@media (min-width: 900px) and (max-width: 1400px) {
+  .container {
+    padding: 0 20px;
+  }
 }
 
-/* Mobile navigation styles */
-.navbar {
-  display: flex; /* Default is flex for larger screens */
+nav {
+  display: flex; /* Default to flex layout */
   align-items: center; /* Center items vertically */
 }
 
-.navbar.open {
-  display: flex; /* Show as flex when open */
-  flex-direction: column; /* Stack items vertically */
-  position: absolute; /* Overlay on top of content */
-  top: 100px; /* Position below header */
-  left: 0;
-  right: 0;
-  background: linear-gradient(135deg, #1e003a, #3b006d, #6100c0);
-  padding: 20px 0;
-  z-index: 1000; /* Ensure it stays on top */
+nav a {
+  margin: 0 20px; /* Add horizontal spacing */
+  text-decoration: none;
+  color: #ffffff;
 }
 
-.navbar.open:hover {
-  background-color: #b8a5df; /* Darker purple on hover */
-  transform: translateY(-2px); /* Lift effect */
+.navbar {
+    display: flex;
+    gap: 20px;
 }
 
 .navbar a {
-  display: block; /* Stack links vertically */
-  margin: 10px 33px; /* Space between links */
+    color: b69cff;
+    text-decoration: none;
 }
+
+.hamburger-button {
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure hamburger button is on top */
+    position: fixed;
+    right: 0;
+    background-color: transparent;
+    padding: 20px; /* Add some padding */
+
+}
+.hamburger-button:hover{
+  background-color: transparent;
+}
+.slide-in-menu {
+  position: fixed; /* Change to fixed */
+  top: 0;
+  right: -300px; /* Start off-screen */
+  width: 300px;
+  height: 100%;
+  background: #3d076e;
+  color: white;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  
+}
+
+
+.slide-in-menu.open {
+    right: 0; /* Slide in */
+}
+
+.slide-in-menu nav {
+    margin-right: auto; /* Push nav links to the bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    
+}
+
+.slide-in-menu a {
+    margin: 10px 0; /* Spacing between links */
+    text-decoration: none;
+    color: #b69cff;
+    font-size: larger;
+    font-weight: 800;
+}
+.menu-open {
+  overflow: hidden; /* Prevent body scroll */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+    z-index: 999; /* Below the menu */
+}
+
+.overlay.visible {
+    opacity: 1; /* Show overlay */
+    visibility: visible; /* Show overlay */
+}
+
 .account-info {
   position: relative;
   display: inline-block;
@@ -324,16 +382,42 @@ nav a {
 
 /* Media query for mobile styles */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block; /* Show hamburger icon on mobile */
-  }
+
   .wallet-connection-container{
     display: none;
   }
+
+}
+
+@media (min-width: 768px) {
   .navbar {
-    display: none; /* Hide navbar by default on mobile */
-    flex-direction: column; /* Stack items vertically */
-    width: 100%; /* Full width for mobile */
+      display: flex; /* Show navbar on larger screens */
+  }
+
+  .hamburger-button {
+      display: none; /* Hide hamburger button on larger screens */
+  }
+
+  .slide-in-menu {
+      display: none; /* Hide the hamburger menu by default on larger screens */
   }
 }
 
+/* Styles for mobile devices */
+@media (max-width: 767px) {
+  .navbar {
+      display: none; /* Hide navbar on mobile screens */
+  }
+
+  .hamburger-button {
+      display: block; /* Show hamburger button on mobile screens */
+  }
+
+  .slide-in-menu {
+      display: flex; /* Use flex to show the hamburger menu on mobile */
+      /* other styles */
+  }
+  .slide-in-menu.open + .hamburger-button {
+    display: none; /* Hide hamburger button when menu is open */
+}
+}

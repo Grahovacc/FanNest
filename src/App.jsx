@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
-import PolkadotWalletConnect from "./PolkadotWalletConnect"; 
-import computerImg from "./assets/computer_img.png"; // Adjust the path if necessary
+import PolkadotWalletConnect from "./PolkadotWalletConnect";
+import computerImg from "./assets/computer_img.png";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,6 +9,12 @@ function App() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", isMenuOpen);
+    return () => document.body.classList.remove("menu-open");
+  }, [isMenuOpen]);
+
 
   return (
     <div className="container">
@@ -21,12 +27,28 @@ function App() {
           <a href="#support">Support</a>
         </nav>
         <div className="auth-buttons">
-          <div className="Connect-btn"><PolkadotWalletConnect /></div>
+          <div className="connect-button"><PolkadotWalletConnect /></div>
         </div>
-        <button className="hamburger" onClick={toggleMenu}>
-          &#9776;
-        </button>
+        {!isMenuOpen && (
+          <button className="hamburger-button" onClick={toggleMenu}>
+            &#9776;
+          </button>
+        )}
       </header>
+
+      {/* Hamburger Menu */}
+      <div className={`slide-in-menu ${isMenuOpen ? "open" : ""}`}>
+
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#creators">Creators</a>
+          <a href="#about">About</a>
+          <a href="#support">Support</a>
+        </nav>
+      </div>
+
+      {/* Overlay */}
+      <div className={`overlay ${isMenuOpen ? "visible" : ""}`} onClick={toggleMenu}></div>
 
       <main className="hero">
         <div className="hero-content">
@@ -42,7 +64,6 @@ function App() {
           </div>
         </div>
 
-        {/* Separate image element positioned to the right */}
         <img src={computerImg} alt="Computer" className="computer-img" />
       </main>
     </div>
