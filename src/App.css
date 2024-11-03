@@ -222,7 +222,7 @@ nav {
 }
 
 nav a {
-  margin: 0 20px; /* Add horizontal spacing */
+  margin: 0 30px; /* Add horizontal spacing */
   text-decoration: none;
   color: #ffffff;
 }
@@ -257,16 +257,28 @@ nav a {
   width: 300px;
   height: 100%;
   background: #3d076e;
-  color: white;
   transition: right 0.3s ease;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   padding: 40px 20px;
   box-sizing: border-box;
-  
 }
 
+.slide-in-menu .account-info{
+  color: rgb(255, 255, 255);
+  word-break: break-all;
+  font-size: smaller;
+  background-color: #1e003a;
+  border-radius: 15px;
+  padding: 15px;
+  position: absolute; /* Position at the bottom */
+  bottom: 20px; /* Space from the bottom */
+  left: 50%; /* Centering trick */
+  transform: translateX(-50%); /* Adjust left to truly center */
+  text-align: center; /* Center the button text */
+  width: 80%;
+}
 
 .slide-in-menu.open {
     right: 0; /* Slide in */
@@ -378,12 +390,15 @@ nav a {
 }
 
 
-
+.slide-in-menu .connect-button {
+  display: block; /* Ensure the new connect button is visible */
+  margin-top: 20px; /* Add margin for spacing */
+}
 
 /* Media query for mobile styles */
 @media (max-width: 768px) {
 
-  .wallet-connection-container{
+  .connect-button{
     display: none;
   }
 

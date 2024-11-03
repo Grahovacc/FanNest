@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { web3Enable, web3Accounts } from '@polkadot/extension-dapp';
 
-const PolkadotWalletConnect = () => {
+const PolkadotWalletConnect = ({ setSelectedAccount }) => {
   const [isWalletConnected, setWalletConnected] = useState(false);
   const [accounts, setAccounts] = useState([]);
-  const [selectedAccount, setSelectedAccount] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   // Function to connect to wallet
   const connectWallet = async () => {
     setLoading(true);
-    setError(null); // Clear any previous errors
+    setError(null);
     try {
       const extensions = await web3Enable('Polkadot Wallet Connect');
       if (extensions.length === 0) {
@@ -24,7 +23,7 @@ const PolkadotWalletConnect = () => {
       }
 
       setAccounts(allAccounts);
-      setSelectedAccount(allAccounts[0].address); // Default to the first account
+      setSelectedAccount(allAccounts[0].address); // Update selected account in App
       setWalletConnected(true);
     } catch (error) {
       setError(error.message);
@@ -33,11 +32,18 @@ const PolkadotWalletConnect = () => {
     }
   };
 
-  // Function to disconnect the wallet
   const disconnectWallet = () => {
     setWalletConnected(false);
     setAccounts([]);
-    setSelectedAccount(null);
+    setSelectedAccount(null); // Reset the account in App
+  };
+
+  // Function to truncate the address
+  const truncateAddress = (address) => {
+    if (address.length <= 10) return address; 
+    const firstPart = address.slice(0, 8);
+    const lastPart = address.slice(-8);
+    return `${firstPart}...${lastPart}`;
   };
 
   return (
@@ -51,14 +57,12 @@ const PolkadotWalletConnect = () => {
         </div>
       ) : (
         <div className="account-info">
-          <button onClick={disconnectWallet} className="account-info-btn">
-            Log Out
-          </button>
-          <span className="account-tooltip">{selectedAccount}</span>
+          <button onClick={disconnectWallet} className="account-info-btn">Log Out</button>
+          <span className="account-tooltip" title={accounts[0].address}>
+            {truncateAddress(accounts[0].address)}
+          </span>
         </div>
       )}
-      <div className='accAdress'>
-      </div>
     </div>
   );
 };
