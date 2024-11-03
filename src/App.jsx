@@ -70,8 +70,8 @@ function App() {
         <nav>
           <a href="#home">Home</a>
           <a href="#creators">Creators</a>
-          <a href="#about">About</a>
-          <a href="#support">Support</a>
+          <a href="#about">Profile</a>
+          <a href="#support">Contact Us</a>
           {selectedAccount && <span className="account-info">{selectedAccount}</span>}
           {!selectedAccount && (
             <button
