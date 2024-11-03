@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import PolkadotWalletConnect from "./PolkadotWalletConnect";
 import computerImg from "./assets/computer_img.png";
+import Footer from "./Footer";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,6 +41,8 @@ function App() {
   };
 
   return (
+    <>
+    <div class="background-waves"></div>
     <div className="container">
       <header className="header">
         <div className="logo">Polkatron</div>
@@ -107,7 +110,33 @@ function App() {
 
         <img src={computerImg} alt="Computer" className="computer-img" />
       </main>
+
+      <div className="content">
+      <h2>Select Your Payment Plan</h2>
+  <div className="payment-options">
+    <div className="payment-option">
+      <h3>Basic Plan</h3>
+      <p>$10/month</p>
+      <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia numquam molestias nemo a, magni ea sit cumque ex eos placeat fuga? Quidem harum possimus recusandae earum expedita sint amet velit?</h2>
+      <button>Choose Plan</button>
     </div>
+    <div className="payment-option">
+      <h3>Standard Plan</h3>
+      <p>$20/month</p>
+      <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia numquam molestias nemo a, magni ea sit cumque ex eos placeat fuga? Quidem harum possimus recusandae earum expedita sint amet velit?</h2>
+      <button>Choose Plan</button>
+    </div>
+    <div className="payment-option">
+      <h3>Premium Plan</h3>
+      <p>$30/month</p>
+      <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia numquam molestias nemo a, magni ea sit cumque ex eos placeat fuga? Quidem harum possimus recusandae earum expedita sint amet velit?</h2>
+      <button>Choose Plan</button>
+    </div>
+  </div>
+      </div>
+    </div>
+    <Footer/>
+    </>
   );
 }
 

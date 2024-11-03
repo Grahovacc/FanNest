@@ -3,7 +3,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #1e003a, #3b006d, #6100c0, #ac00db);
+  background: linear-gradient(135deg, #1e003a, #3b006d);
   background-size: 150% 150%; 
   animation: gradientAnimation 15s ease infinite; 
   min-height: 100vh;
@@ -13,13 +13,94 @@ body {
   padding-top: 20px;
   margin: 0;
   overflow-x: hidden; 
-  background-color: #3d076e; 
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%236100c0" fill-opacity="1" d="M0,200 C150,300 350,100 500,200 C650,300 850,100 1000,200 C1150,300 1350,100 1440,200 L 1440,320 L 0,320 Z"></path></svg>');
+  background-color: #3d076e; /* This can remain for fallback */
+  position: relative; /* Allow absolute positioning of pseudo-elements */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 450px; /* Lower the waves even further */
+  left: 0;
+  right: 0;
+  height: 320px; /* Height of the waves */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%236100c0" fill-opacity="1" d="M0,96L48,80C96,64,192,32,288,42.7C384,53,480,107,576,149.3C672,192,768,224,864,197.3C960,171,1056,85,1152,64C1248,43,1344,85,1392,106.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
   background-size: cover; 
   background-repeat: no-repeat;
-  overflow: hidden;
-
+  z-index: -1; /* Ensure it's behind content */
 }
+
+body::after {
+  content: '';
+  position: absolute;
+  top: calc(450px + 300px); /* Adjust to match the new top value of waves */
+  left: 0;
+  right: 0;
+  bottom: 0; /* Cover the rest of the page */
+  background-color: #6100c0; /* Set to white */
+  z-index: -1; /* Ensure it's behind content */
+}
+.content {
+  text-align: center; /* Center the text */
+  padding: 20px; /* Optional padding */
+  padding-top: 20%;
+}
+
+.payment-options {
+  display: flex; /* Flexbox layout for options */
+  justify-content: space-around; /* Space options evenly */
+  margin-top: 20px; /* Space above options */
+}
+
+.payment-option {
+  background-color: #ffffff; /* Purple background */
+  color: #6100c0; /* White text */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside each option */
+  width: 30%; /* Set width for each option */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.payment-option:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.payment-option h3 {
+  margin: 0; /* Remove default margin */
+}
+
+.payment-option p {
+  font-size: 1.2em; /* Slightly larger text for price */
+}
+
+.payment-option button {
+  background-color: #6100c0; /* White button */
+  color: #ffffff; /* Purple text on button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded button corners */
+  padding: 10px 15px; /* Button padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.2s; /* Animation for hover */
+}
+
+.payment-option button:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 900px) {
+  .payment-options {
+    flex-direction: column; /* Stack options vertically */
+    align-items: center; /* Center the stacked options */
+  }
+
+  .payment-option {
+    width: 80%; /* Set width for stacked options */
+    margin-bottom: 20px; /* Space between stacked options */
+  }
+}
+
 
 @media (max-width: 1px) {
   .container {
