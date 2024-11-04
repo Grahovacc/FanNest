@@ -182,10 +182,17 @@ button:focus {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
+}
+.logo-fan {
   color: #e0b3ff;
 }
+
+.logo-nest {
+  color: white;
+}
+
 
 
 /* Modern Button Styles */

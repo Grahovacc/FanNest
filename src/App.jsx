@@ -45,7 +45,10 @@ function App() {
     <div class="background-waves"></div>
     <div className="container">
       <header className="header">
-        <div className="logo">Polkatron</div>
+        <div className="logo">
+          <span className="logo-fan">Fan</span>
+          <span className="logo-nest">Nest</span>
+        </div>
         <nav className={`navbar ${isMenuOpen ? "open" : ""}`}>
           <a href="#home">Home</a>
           <a href="#creators">Creators</a>
