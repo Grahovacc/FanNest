@@ -186,7 +186,7 @@ button:focus {
   font-weight: bold;
 }
 .logo-fan {
-  color: #e0b3ff;
+  color: #b69cff;
 }
 
 .logo-nest {
@@ -313,16 +313,34 @@ nav a {
   margin: 0 30px; /* Add horizontal spacing */
   text-decoration: none;
   color: #ffffff;
-}
-
-.navbar {
-    display: flex;
-    gap: 20px;
+  
 }
 
 .navbar a {
-    color: b69cff;
-    text-decoration: none;
+  text-decoration: none; /* Remove underline */
+  color: white; /* Default link color */
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navbar a:hover {
+  color: #b69cff; /* Change color on hover */
+}
+
+.navbar a::after {
+  content: ''; /* Pseudo-element for the animation effect */
+  position: absolute;
+  left: 50%; /* Center the pseudo-element */
+  bottom: 0; /* Position at the bottom */
+  width: 0; /* Start with no width */
+  height: 2px; /* Height of the underline */
+  background-color: #b69cff; /* Color of the underline */
+  transition: width 0.3s ease, left 0.3s ease; /* Animation for width and position */
+}
+
+.navbar a:hover::after {
+  width: 100%; /* Full width on hover */
+  left: 0; /* Align to the left */
 }
 
 .hamburger-button {
