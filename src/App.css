@@ -4,34 +4,34 @@
 
 body {
   background: linear-gradient(135deg, #1e003a, #3b006d);
-  background-size: 150% 150%; 
-  animation: gradientAnimation 15s ease infinite; 
+  background-size: 150% 150%;
+  animation: gradientAnimation 15s ease infinite;
   min-height: 100vh;
   color: #ffffff;
   display: block;
   align-items: flex-start;
   padding-top: 20px;
   margin: 0;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   background-color: #3d076e; /* This can remain for fallback */
   position: relative; /* Allow absolute positioning of pseudo-elements */
 }
 
 body::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 450px; /* Lower the waves even further */
   left: 0;
   right: 0;
   height: 320px; /* Height of the waves */
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%236100c0" fill-opacity="1" d="M0,96L48,80C96,64,192,32,288,42.7C384,53,480,107,576,149.3C672,192,768,224,864,197.3C960,171,1056,85,1152,64C1248,43,1344,85,1392,106.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-  background-size: cover; 
+  background-size: cover;
   background-repeat: no-repeat;
   z-index: -1; /* Ensure it's behind content */
 }
 
 body::after {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(450px + 300px); /* Adjust to match the new top value of waves */
   left: 0;
@@ -101,25 +101,24 @@ body::after {
   }
 }
 
-
 @media (max-width: 1px) {
   .container {
-    margin-left: 10%;  /* Adjust left margin for the whole container */
+    margin-left: 10%; /* Adjust left margin for the whole container */
     margin-right: 10%; /* Adjust right margin for the whole container */
   }
-  .wallet-connection-container{
+  .wallet-connection-container {
     margin-left: 0%;
     margin-right: 0%;
   }
-  .header{
+  .header {
     margin-left: 0%;
     margin-right: 0%;
   }
   .auth-buttons {
-    margin-left: 0%;  /* Ensure the auth-buttons div is centered */
+    margin-left: 0%; /* Ensure the auth-buttons div is centered */
     margin-right: 20%; /* Ensure the auth-buttons div is centered */
   }
-  
+
   .modern-btn {
     margin-left: auto; /* Center the button if needed */
     margin-right: auto; /* Center the button if needed */
@@ -192,8 +191,6 @@ button:focus {
 .logo-nest {
   color: white;
 }
-
-
 
 /* Modern Button Styles */
 .modern-btn {
@@ -275,7 +272,6 @@ button:focus {
   margin-left: 20px; /* Add space between text and image */
 }
 
-
 /* Media Query for Responsive Design */
 @media (max-width: 900px) {
   .hero {
@@ -313,7 +309,6 @@ nav a {
   margin: 0 30px; /* Add horizontal spacing */
   text-decoration: none;
   color: #ffffff;
-  
 }
 
 .navbar a {
@@ -328,7 +323,7 @@ nav a {
 }
 
 .navbar a::after {
-  content: ''; /* Pseudo-element for the animation effect */
+  content: ""; /* Pseudo-element for the animation effect */
   position: absolute;
   left: 50%; /* Center the pseudo-element */
   bottom: 0; /* Position at the bottom */
@@ -344,16 +339,15 @@ nav a {
 }
 
 .hamburger-button {
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1001; /* Ensure hamburger button is on top */
-    position: fixed;
-    right: 0;
-    background-color: transparent;
-    padding: 20px; /* Add some padding */
-
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure hamburger button is on top */
+  position: fixed;
+  right: 0;
+  background-color: transparent;
+  padding: 20px; /* Add some padding */
 }
-.hamburger-button:hover{
+.hamburger-button:hover {
   background-color: transparent;
 }
 .slide-in-menu {
@@ -371,7 +365,7 @@ nav a {
   box-sizing: border-box;
 }
 
-.slide-in-menu .account-info{
+.slide-in-menu .account-info {
   color: rgb(255, 255, 255);
   word-break: break-all;
   font-size: smaller;
@@ -387,22 +381,22 @@ nav a {
 }
 
 .slide-in-menu.open {
-    right: 0; /* Slide in */
+  right: 0; /* Slide in */
 }
 
 .slide-in-menu nav {
-    margin-right: auto; /* Push nav links to the bottom */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
+  margin-right: auto; /* Push nav links to the bottom */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
 }
 
 .slide-in-menu a {
-    margin: 10px 0; /* Spacing between links */
-    text-decoration: none;
-    color: #b69cff;
-    font-size: larger;
-    font-weight: 800;
+  margin: 10px 0; /* Spacing between links */
+  text-decoration: none;
+  color: #b69cff;
+  font-size: larger;
+  font-weight: 800;
 }
 
 .slide-in-menu .connect-button {
@@ -415,21 +409,21 @@ nav a {
 }
 
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
-    opacity: 0; /* Initially hidden */
-    visibility: hidden; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Smooth fade-in */
-    z-index: 999; /* Below the menu */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth fade-in */
+  z-index: 999; /* Below the menu */
 }
 
 .overlay.visible {
-    opacity: 1; /* Show overlay */
-    visibility: visible; /* Show overlay */
+  opacity: 1; /* Show overlay */
+  visibility: visible; /* Show overlay */
 }
 
 .account-info {
@@ -448,7 +442,7 @@ nav a {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   outline: none; /* Remove outline */
-} 
+}
 
 /* Tooltip styling */
 .account-tooltip {
@@ -483,7 +477,6 @@ nav a {
   border-color: transparent transparent #333 transparent;
 }
 
-
 /* Show tooltip on hover */
 .account-info-btn:hover + .account-tooltip {
   visibility: visible;
@@ -500,45 +493,42 @@ nav a {
   }
 }
 
-
 /* Media query for mobile styles */
 @media (max-width: 768px) {
-
-  .connect-button{
+  .connect-button {
     display: none;
   }
-
 }
 
 @media (min-width: 768px) {
   .navbar {
-      display: flex; /* Show navbar on larger screens */
+    display: flex; /* Show navbar on larger screens */
   }
 
   .hamburger-button {
-      display: none; /* Hide hamburger button on larger screens */
+    display: none; /* Hide hamburger button on larger screens */
   }
 
   .slide-in-menu {
-      display: none; /* Hide the hamburger menu by default on larger screens */
+    display: none; /* Hide the hamburger menu by default on larger screens */
   }
 }
 
 /* Styles for mobile devices */
 @media (max-width: 767px) {
   .navbar {
-      display: none; /* Hide navbar on mobile screens */
+    display: none; /* Hide navbar on mobile screens */
   }
 
   .hamburger-button {
-      display: block; /* Show hamburger button on mobile screens */
+    display: block; /* Show hamburger button on mobile screens */
   }
 
   .slide-in-menu {
-      display: flex; /* Use flex to show the hamburger menu on mobile */
-      /* other styles */
+    display: flex; /* Use flex to show the hamburger menu on mobile */
+    /* other styles */
   }
   .slide-in-menu.open + .hamburger-button {
     display: none; /* Hide hamburger button when menu is open */
-}
+  }
 }
