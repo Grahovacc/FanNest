@@ -120,19 +120,7 @@ function App() {
     <div className="payment-option">
       <h3>Basic Plan</h3>
       <p>$10/month</p>
-      <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia numquam molestias nemo a, magni ea sit cumque ex eos placeat fuga? Quidem harum possimus recusandae earum expedita sint amet velit?</h2>
-      <button>Choose Plan</button>
-    </div>
-    <div className="payment-option">
-      <h3>Standard Plan</h3>
-      <p>$20/month</p>
-      <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia numquam molestias nemo a, magni ea sit cumque ex eos placeat fuga? Quidem harum possimus recusandae earum expedita sint amet velit?</h2>
-      <button>Choose Plan</button>
-    </div>
-    <div className="payment-option">
-      <h3>Premium Plan</h3>
-      <p>$30/month</p>
-      <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia numquam molestias nemo a, magni ea sit cumque ex eos placeat fuga? Quidem harum possimus recusandae earum expedita sint amet velit?</h2>
+      <h2></h2>
       <button>Choose Plan</button>
     </div>
   </div>
