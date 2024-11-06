@@ -85,26 +85,26 @@ body::after {
 }
 
 .payment-option button:hover {
-  background-color: #f0f0f0; /* Light gray on hover */
+  background-color: #f0f0f0;
 }
 
 /* Media query for responsiveness */
 @media (max-width: 900px) {
   .payment-options {
-    flex-direction: column; /* Stack options vertically */
-    align-items: center; /* Center the stacked options */
+    flex-direction: column;
+    align-items: center;
   }
 
   .payment-option {
-    width: 80%; /* Set width for stacked options */
-    margin-bottom: 20px; /* Space between stacked options */
+    width: 80%;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 1px) {
   .container {
-    margin-left: 10%; /* Adjust left margin for the whole container */
-    margin-right: 10%; /* Adjust right margin for the whole container */
+    margin-left: 10%;
+    margin-right: 10%;
   }
   .wallet-connection-container {
     margin-left: 0%;
@@ -115,13 +115,13 @@ body::after {
     margin-right: 0%;
   }
   .auth-buttons {
-    margin-left: 0%; /* Ensure the auth-buttons div is centered */
-    margin-right: 20%; /* Ensure the auth-buttons div is centered */
+    margin-left: 0%;
+    margin-right: 20%;
   }
 
   .modern-btn {
-    margin-left: auto; /* Center the button if needed */
-    margin-right: auto; /* Center the button if needed */
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
