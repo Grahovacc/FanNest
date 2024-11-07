@@ -75,20 +75,19 @@ body::after {
 }
 
 .payment-option button {
-  background-color: #6100c0; /* White button */
-  color: #ffffff; /* Purple text on button */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded button corners */
-  padding: 10px 15px; /* Button padding */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.2s; /* Animation for hover */
+  background-color: #6100c0;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .payment-option button:hover {
   background-color: #f0f0f0;
 }
 
-/* Media query for responsiveness */
 @media (max-width: 900px) {
   .payment-options {
     flex-direction: column;
