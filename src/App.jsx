@@ -22,21 +22,17 @@ function App() {
     return () => document.body.classList.remove("menu-open");
   }, [isMenuOpen]);
 
-  // Handle touch start
   const handleTouchStart = (e) => {
-    setTouchStartX(e.touches[0].clientX); // Record the initial touch point on X-axis
+    setTouchStartX(e.touches[0].clientX);
   };
 
-  // Handle touch end
   const handleTouchEnd = (e) => {
-    const touchEndX = e.changedTouches[0].clientX; // Record the final touch point on X-axis
+    const touchEndX = e.changedTouches[0].clientX;
     if (touchStartX - touchEndX > 100) {
-      // Swipe left (ignore)
       return;
     }
     if (touchEndX - touchStartX > 100) {
-      // Swipe right detected
-      setIsMenuOpen(false); // Close the menu
+      setIsMenuOpen(false);
     }
   };
 
@@ -85,11 +81,11 @@ function App() {
               <button
                 className="connect-button"
                 onClick={(e) => {
-                  e.stopPropagation(); // Prevents closing the sidebar
+                  e.stopPropagation();
                   const connectButton = document.querySelector(
                     ".auth-buttons .connect-button button"
                   );
-                  connectButton.click(); // Simulate clicking the main connect button
+                  connectButton.click();
                 }}
               >
                 Connect Wallet
