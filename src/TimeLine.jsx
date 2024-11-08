@@ -33,7 +33,6 @@ const TimeLine = () => {
 
   return (
     <div class="timeline-container">
-      <h2>Projects</h2>
       <div class="timeline">
         <div class="timeline-item">
           <div class="content left">
@@ -56,13 +55,17 @@ const TimeLine = () => {
 
         <div class="timeline-item">
           <div class="content right">
-            <h3>Project 2</h3>
-            <p>A project focused on...</p>
+            <h3>Creator Empowerment</h3>
             <p>
-              <strong>Role:</strong> Role here
+              FanNest enables creators to maintain control over their content
+              while monetizing directly from their supporters in a transparent
+              environment.
             </p>
             <p>
-              <strong>Stack:</strong> Tech stack here
+              <strong>Virtues:</strong> Autonomy, Freedom, Innovation
+            </p>
+            <p>
+              <strong>Stack:</strong> React, Smart Contracts, Blockchain
             </p>
             <p>
               <strong>Links:</strong> <a href="#">GitHub</a>
@@ -72,13 +75,17 @@ const TimeLine = () => {
 
         <div class="timeline-item">
           <div class="content left">
-            <h3>Project 3</h3>
-            <p>Description of another project...</p>
+            <h3>Community Engagement</h3>
             <p>
-              <strong>Role:</strong> Role here
+              FanNest brings fans closer to creators through direct
+              interactions, exclusive content, and events that help build a
+              loyal community.
             </p>
             <p>
-              <strong>Stack:</strong> Tech stack here
+              <strong>Virtues:</strong> Interaction, Growth, Loyalty
+            </p>
+            <p>
+              <strong>Stack:</strong> Web3, React, Firebase
             </p>
             <p>
               <strong>Links:</strong> <a href="#">Live Demo</a>
@@ -88,8 +95,15 @@ const TimeLine = () => {
 
         <div class="timeline-item">
           <div class="content right">
-            <h3>To Be Declared</h3>
-            <p>Project details to be announced...</p>
+            <h3>Decentralized Platform</h3>
+            <p>
+              With Web3 integration, FanNest ensures users have full control
+              over their data and interactions, offering transparency and
+              security.
+            </p>
+            <p>
+              <strong>Virtues:</strong> Security, Privacy, Ownership
+            </p>
           </div>
         </div>
       </div>
