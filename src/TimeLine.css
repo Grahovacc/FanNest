@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0d0d2b;
+  color: #f2f2f2;
+}
+
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
+  color: #f2f2f2;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  border-radius: 10px;
+  height: 100%;
+  background-color: #b69cff;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  opacity: 0; /* Hidden initially */
+  transform: translateY(30px); /* Start with the item slightly below */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for animation */
+}
+
+.timeline-item .content {
+  background-color: #1d1d3b;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  color: #f2f2f2;
+  text-align: left;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.timeline-item .content h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.timeline-item .content p {
+  margin: 5px 0;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(odd) .content {
+  transform: translateX(-20px);
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item:nth-child(even) .content {
+  transform: translateX(20px);
+}
+
+.timeline-item .content a {
+  color: #f2a365;
+  text-decoration: none;
+}
+
+.timeline-item .content a:hover {
+  text-decoration: underline;
+}
+
+/* Hover effect */
+.timeline-item .content:hover {
+  background-color: #30345e;
+  transform: translateY(-5px); /* Slightly lift the element */
+}
+
+/* Animation when scrolled into view */
+.timeline-item.visible {
+  opacity: 1; /* Make it visible */
+  transform: translateY(0); /* Move it to its final position */
+}

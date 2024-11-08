@@ -3,6 +3,7 @@ import "./App.css";
 import PolkadotWalletConnect from "./PolkadotWalletConnect";
 import Lenis from "lenis";
 import computerImg from "./assets/computer_img.png";
+import TimeLine from "./TimeLine";
 import Footer from "./Footer";
 
 function App() {
@@ -46,7 +47,7 @@ function App() {
 
   return (
     <>
-      <div class="background-waves"></div>
+      <div className="background-pattern"></div>
       <div className="container">
         <header className="header">
           <div className="logo">
@@ -129,7 +130,6 @@ function App() {
 
           <img src={computerImg} alt="Computer" className="computer-img" />
         </main>
-
         <div className="content">
           <div className="payment-options">
             <div className="payment-option">
@@ -159,7 +159,8 @@ function App() {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <TimeLine />
+      <Footer />
     </>
   );
 }
