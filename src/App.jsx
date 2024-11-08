@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import PolkadotWalletConnect from "./PolkadotWalletConnect";
+import Lenis from "lenis";
 import computerImg from "./assets/computer_img.png";
 import Footer from "./Footer";
 
@@ -35,6 +36,14 @@ function App() {
       setIsMenuOpen(false);
     }
   };
+
+  const lenis = new Lenis({
+    autoRaf: true,
+  });
+
+  lenis.on("scroll", (e) => {
+    console.log(e);
+  });
 
   return (
     <>
@@ -123,10 +132,10 @@ function App() {
           <h2>Select Your Payment Plan</h2>
           <div className="payment-options">
             <div className="payment-option">
-              <h3>Basic Plan</h3>
-              <p>$10/month</p>
+              <h3>About us</h3>
+              <p></p>
               <h2></h2>
-              <button>Choose Plan</button>
+              <button>More</button>
             </div>
           </div>
         </div>
