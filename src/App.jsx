@@ -37,13 +37,12 @@ function App() {
     }
   };
 
-  const lenis = new Lenis({
-    autoRaf: true,
-  });
+  useEffect(() => {
+    const lenis = new Lenis({ autoRaf: true });
+    lenis.on("scroll", (e) => console.log(e));
 
-  lenis.on("scroll", (e) => {
-    console.log(e);
-  });
+    return () => lenis.destroy(); // Cleanup on unmount
+  }, []);
 
   return (
     <>
@@ -113,7 +112,10 @@ function App() {
           <div className="hero-content">
             <h1>
               Unlock Premium <span className="highlight">Content</span> with
-              Polkatron
+              <div className="second-logo">
+                <span className="logo-fan2">Fan</span>
+                <span className="logo-nest2">Nest</span>
+              </div>
             </h1>
             <p>
               Support your favorite creators and enjoy exclusive content. Pay
@@ -129,18 +131,35 @@ function App() {
         </main>
 
         <div className="content">
-          <h2>Select Your Payment Plan</h2>
           <div className="payment-options">
             <div className="payment-option">
-              <h3>About us</h3>
-              <p></p>
+              <h3>Decentralized Payments</h3>
+              <p>
+                Experience the future of creator support with cutting-edge Web3
+                technologies
+              </p>
               <h2></h2>
-              <button>More</button>
+            </div>
+            <div className="payment-option">
+              <h3>Community Governance</h3>
+              <p>
+                Experience the future of creator support with cutting-edge Web3
+                technologies
+              </p>
+              <h2></h2>
+            </div>
+            <div className="payment-option">
+              <h3>About us</h3>
+              <p>
+                Experience the future of creator support with cutting-edge Web3
+                technologies
+              </p>
+              <h2></h2>
             </div>
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
