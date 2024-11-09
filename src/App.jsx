@@ -130,36 +130,21 @@ function App() {
 
           <img src={computerImg} alt="Computer" className="computer-img" />
         </main>
+        <TimeLine />
         <div className="content">
-          <div className="payment-options">
-            <div className="payment-option">
-              <h3>Decentralized Payments</h3>
+          <div class="HeroSection">
+            <div class="HeroContent">
+              <h2>Join FanNest & Support Your Favorite Creators with Web3</h2>
               <p>
-                Experience the future of creator support with cutting-edge Web3
-                technologies
+                Experience a new way to connect with creators using
+                cryptocurrency, unlock exclusive content, and be part of a
+                decentralized future.
               </p>
-              <h2></h2>
-            </div>
-            <div className="payment-option">
-              <h3>Community Governance</h3>
-              <p>
-                Experience the future of creator support with cutting-edge Web3
-                technologies
-              </p>
-              <h2></h2>
-            </div>
-            <div className="payment-option">
-              <h3>About us</h3>
-              <p>
-                Experience the future of creator support with cutting-edge Web3
-                technologies
-              </p>
-              <h2></h2>
+              <button class="LaunchButton">Launch App</button>
             </div>
           </div>
         </div>
       </div>
-      <TimeLine />
       <Footer />
     </>
   );

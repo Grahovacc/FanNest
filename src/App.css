@@ -62,57 +62,56 @@ body {
   padding-top: 5%;
 }
 
-.line {
-  position: fixed;
-  left: 50%;
-  top: 0;
-  height: 0;
-  width: 3px;
-  background: linear-gradient(to bottom, transparent 0%, #00aaff 100%);
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: height 1s, opacity 1s;
-}
-.payment-options {
-  display: flex; /* Flexbox layout for options */
-  justify-content: space-around; /* Space options evenly */
-  margin-top: 20px; /* Space above options */
+/* Main Hero Section */
+.HeroSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Adjust height as needed */
+  background: linear-gradient(135deg, #0d0f23, #191d3a); /* Dark theme colors */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-.payment-option {
-  background-color: #915bff; /* Purple background */
-  color: #ffffff; /* White text */
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Padding inside each option */
-  width: 30%; /* Set width for each option */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-  transition: transform 0.2s; /* Animation for hover effect */
+/* Content inside Hero Section */
+.HeroContent {
+  text-align: center;
+  color: #ffffff;
+  max-width: 600px;
 }
 
-.payment-option:hover {
-  transform: scale(1.05); /* Scale up on hover */
+/* Title styling */
+.HeroContent h2 {
+  font-size: 2.5em;
+  margin: 0 0 10px;
+  font-weight: 700;
 }
 
-.payment-option h3 {
-  margin: 0; /* Remove default margin */
+/* Description styling */
+.HeroContent p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #d1d1e9;
 }
 
-.payment-option p {
-  font-size: 1.1em; /* Slightly larger text for price */
-  text-align: left;
-  color: #b69cff;
+/* Button styling */
+.LaunchButton {
+  background-color: #8e54e9; /* Primary button color */
+  color: #ffffff;
+  font-size: 1em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-@media (max-width: 900px) {
-  .payment-options {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .payment-option {
-    width: 80%;
-    margin-bottom: 20px;
-  }
+/* Button hover effect */
+.LaunchButton:hover {
+  background-color: #6c3bc4;
+  transform: scale(1.05);
 }
 
 @media (max-width: 1px) {
@@ -142,7 +141,7 @@ body {
 .container {
   width: 100%;
   padding: 0 20px;
-  max-width: 1400px; /* Optional: Set a max-width to contain content */
+  max-width: 1600px; /* Optional: Set a max-width to contain content */
   margin: 0 auto; /* Center the container */
   box-sizing: border-box; /* Include padding in width */
   margin-top: 0; /* Default position */
@@ -317,6 +316,12 @@ button:focus {
     margin-top: 20px; /* Add some space above the image */
     max-width: 80%; /* Adjust size for mobile */
     align-items: flex-start;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  .hero {
+    margin-top: 70px; /* Adjust the value to your desired margin */
   }
 }
 

@@ -3,6 +3,26 @@ import "./TimeLine.css";
 
 const TimeLine = () => {
   useEffect(() => {
+    const timelineItems = document.querySelectorAll(".timeline-item");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    timelineItems.forEach((item) => {
+      observer.observe(item);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+  useEffect(() => {
     // Intersection Observer to detect when an item enters the viewport
     const items = document.querySelectorAll(".timeline-item");
 
