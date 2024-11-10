@@ -19,7 +19,7 @@ FanNest empowers creators and fans with a Web3 experience by enabling:
 - Secure, wallet-based logins (Polkadot integration and other supported wallets).
 - Decentralized data storage using IPFS.
 
-## Features
+## Features 
 
 - **Crypto Wallet Login**: Fans connect using their wallets (e.g., Polkadot) to log in and interact.
 - **Subscription System**: Fans can support creators with crypto-based subscriptions.
