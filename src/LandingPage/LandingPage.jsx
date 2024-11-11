@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "./LandingPage.css";
 import PolkadotWalletConnect from "./PolkadotWalletConnect";
 import Lenis from "lenis";
-import computerImg from "./assets/computer_img.png";
+import computerImg from "../assets/computer_img.png";
 import TimeLine from "./TimeLine";
 import Footer from "./Footer";
 
-function App() {
+function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedAccount, setSelectedAccount] = useState(null);
   const [touchStartX, setTouchStartX] = useState(0);
@@ -172,4 +172,4 @@ function App() {
   );
 }
 
-export default App;
+export default LandingPage;
