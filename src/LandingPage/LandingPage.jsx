@@ -5,6 +5,7 @@ import Lenis from "lenis";
 import computerImg from "../assets/computer_img.png";
 import TimeLine from "./TimeLine";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
