@@ -55,10 +55,9 @@ function App() {
             <span className="logo-nest">Nest</span>
           </div>
           <nav className={`navbar ${isMenuOpen ? "open" : ""}`}>
-            <a href="#home">Home</a>
+            <a href="/">Home</a>
             <a href="#creators">Creators</a>
-            <a href="#about">About</a>
-            <a href="#support">Support</a>
+            <a href="#features-section">About</a>
           </nav>
           <div className="auth-buttons">
             <div className="connect-button">
@@ -78,10 +77,9 @@ function App() {
           onTouchEnd={handleTouchEnd}
         >
           <nav>
-            <a href="#home">Home</a>
+            <a href="/">Home</a>
             <a href="#creators">Creators</a>
             <a href="#about">Profile</a>
-            <a href="#support">Contact Us</a>
             {selectedAccount && (
               <span className="account-info">{selectedAccount}</span>
             )}
@@ -127,9 +125,7 @@ function App() {
 
           <img src={computerImg} alt="Computer" className="computer-img" />
         </main>
-        {/* <TimeLine /> */}
-        <div className="features-section">
-          {/* <h2>Why Choose FanNest?</h2> */}
+        <div id="features-section" className="features-section">
           <div className="features">
             <div className="feature">
               <h3>Direct Creator Support</h3>
