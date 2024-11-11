@@ -3,6 +3,7 @@
 **FanNest** is a Web3-based platform designed to connect creators with their fans, allowing fans to support creators using cryptocurrency. Fans can subscribe for exclusive content, access rewards, and engage in a decentralized, secure environment.
 
 ## Table of Contents
+
 - [Overview](#overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
@@ -14,12 +15,13 @@
 ## Overview
 
 FanNest empowers creators and fans with a Web3 experience by enabling:
+
 - Monthly cryptocurrency-based subscriptions.
 - Access to exclusive content and perks.
 - Secure, wallet-based logins (Polkadot integration and other supported wallets).
 - Decentralized data storage using IPFS.
 
-## Features 
+## Features
 
 - **Crypto Wallet Login**: Fans connect using their wallets (e.g., Polkadot) to log in and interact.
 - **Subscription System**: Fans can support creators with crypto-based subscriptions.
@@ -33,7 +35,7 @@ FanNest empowers creators and fans with a Web3 experience by enabling:
 - **Backend**: Node.js, Express.js
 - **Blockchain**: Polkadot, IPFS
 - **Styling**: CSS, Tailwind (or any additional libraries you’re using)
-  
+
 ## Getting Started
 
 ### Prerequisites
