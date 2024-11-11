@@ -71,7 +71,6 @@ function App() {
             </button>
           )}
         </header>
-
         {/* Hamburger Menu */}
         <div
           className={`slide-in-menu ${isMenuOpen ? "open" : ""}`}
@@ -102,13 +101,11 @@ function App() {
             )}
           </nav>
         </div>
-
         {/* Overlay */}
         <div
           className={`overlay ${isMenuOpen ? "visible" : ""}`}
           onClick={toggleMenu}
         ></div>
-
         <main className="hero">
           <div className="hero-content">
             <h1>
@@ -130,7 +127,36 @@ function App() {
 
           <img src={computerImg} alt="Computer" className="computer-img" />
         </main>
-        <TimeLine />
+        {/* <TimeLine /> */}
+        <div className="features-section">
+          {/* <h2>Why Choose FanNest?</h2> */}
+          <div className="features">
+            <div className="feature">
+              <h3>Direct Creator Support</h3>
+              <p>
+                Enable direct support for your favorite creators without
+                intermediaries. Using Web3, payments go straight to the
+                creators, helping them focus on making great content.
+              </p>
+            </div>
+            <div className="feature">
+              <h3>Secure Payments with Cryptocurrency</h3>
+              <p>
+                Experience fast and secure payments using your crypto wallet.
+                Our platform ensures a smooth process for both supporters and
+                creators.
+              </p>
+            </div>
+            <div className="feature">
+              <h3>Exclusive Content Access</h3>
+              <p>
+                Unlock special posts, videos, and behind-the-scenes content
+                shared exclusively with supporters. Gain access to what you love
+                directly from the source.
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="content">
           <div class="HeroSection">
             <div class="HeroContent">

@@ -5,7 +5,7 @@ import "./Footer.css";
 const Footer = () => (
   <footer className="footer">
     <div className="footer-content">
-      <p>&copy; 2024 Polkatron. All rights reserved.</p>
+      <p>&copy; 2024 FanNest. All rights reserved.</p>
       <nav className="footer-links">
         <a href="#privacy">Privacy Policy</a>
         <a href="#terms">Terms of Service</a>

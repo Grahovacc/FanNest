@@ -323,6 +323,9 @@ button:focus {
   .hero {
     margin-top: 70px; /* Adjust the value to your desired margin */
   }
+  .computer-img {
+    max-width: 45%;
+  }
 }
 
 @media (min-width: 900px) and (max-width: 1400px) {
@@ -561,5 +564,64 @@ nav a {
   }
   .slide-in-menu.open + .hamburger-button {
     display: none; /* Hide hamburger button when menu is open */
+  }
+}
+.features-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #e0e0e0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.014); /* Light transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature h3 {
+  font-size: 1.8rem;
+  color: #fff; /* White color for heading */
+  margin-bottom: 1rem;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #cfcfcf; /* Slightly lighter text color */
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .features {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
