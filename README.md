@@ -16,7 +16,7 @@
 
 FanNest empowers creators and fans with a Web3 experience by enabling:
 
-- Monthly cryptocurrency-based subscriptions.
+- Monthly cryptocurrency-based subscriptions!
 - Access to exclusive content and perks.
 - Secure, wallet-based logins (Polkadot integration and other supported wallets).
 - Decentralized data storage using IPFS.
