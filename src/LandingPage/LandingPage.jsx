@@ -3,14 +3,19 @@ import "./LandingPage.css";
 import PolkadotWalletConnect from "./PolkadotWalletConnect";
 import Lenis from "lenis";
 import computerImg from "../assets/computer_img.png";
-import TimeLine from "./TimeLine";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
+import "../../src/index.css";
 
 function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedAccount, setSelectedAccount] = useState(null);
   const [touchStartX, setTouchStartX] = useState(0);
+  const navigate = useNavigate();
+
+  const handleLaunchApp = () => {
+    navigate("/main");
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -119,7 +124,9 @@ function LandingPage() {
               easily with crypto and get the content you love.
             </p>
             <div className="hero-buttons">
-              <button className="cta">Get Started</button>
+              <button onClick={handleLaunchApp} className="cta">
+                Get Started
+              </button>
               <button className="github">Contact Us</button>
             </div>
           </div>
@@ -163,7 +170,9 @@ function LandingPage() {
                 cryptocurrency, unlock exclusive content, and be part of a
                 decentralized future.
               </p>
-              <button class="LaunchButton">Launch App</button>
+              <button onClick={handleLaunchApp} class="LaunchButton">
+                Launch App
+              </button>
             </div>
           </div>
         </div>

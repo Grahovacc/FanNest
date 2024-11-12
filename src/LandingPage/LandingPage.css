@@ -166,7 +166,7 @@ body {
   border-radius: 25px;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px; /* Add some padding for better look */
+  padding: 15px 0px; /* Add some padding for better look */
   margin-bottom: 20px;
 }
 /* Global Button Styles */
