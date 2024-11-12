@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./MainApp.module.css"; // Correct way to import CSS Modules
-import Footer from "./components/Footer";
-import Header from "./components/Header";
 
 function MainApp() {
   return (
