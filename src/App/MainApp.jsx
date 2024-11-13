@@ -5,7 +5,7 @@ function MainApp() {
   return (
     <div className={styles.mainApp}>
       {" "}
-      <h1>🚧UNDER CONSTRUCTION🚧</h1>
+      <h1>🚧 UNDER CONSTRUCTION 🚧</h1>
     </div>
   );
 }
