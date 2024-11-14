@@ -2,7 +2,7 @@
 
 **FanNest** is a Web3-based platform designed to connect creators with their fans, allowing fans to support creators using cryptocurrency. Fans can subscribe for exclusive content, access rewards, and engage in a decentralized, secure environment.
 
-## Table of Contents
+## Table of Contents 
 
 - [Overview](#overview)
 - [Features](#features)
