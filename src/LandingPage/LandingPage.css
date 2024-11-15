@@ -30,7 +30,7 @@ body {
     #1f1f3a
   ); /* Dark gradient */
   background-size: 200% 200%;
-  animation: gradientShift 8s ease infinite; /* Animate gradient */
+  animation: gradientShift 8s ease infinite; 
 
   /* Overlay lines or grid */
   mask-image: linear-gradient(
