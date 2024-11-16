@@ -23,7 +23,7 @@ const TimeLine = () => {
     return () => observer.disconnect();
   }, []);
   useEffect(() => {
-    // Intersection Observer to detect when an item enters the viewport
+
     const items = document.querySelectorAll(".timeline-item");
 
     const observer = new IntersectionObserver(
