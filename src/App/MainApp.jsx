@@ -10,4 +10,4 @@ function MainApp() {
   );
 }
 
-export default MainApp; // Ensure this is a default export
+export default MainApp; 
