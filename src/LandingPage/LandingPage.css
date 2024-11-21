@@ -32,7 +32,6 @@ body {
   background-size: 200% 200%;
   animation: gradientShift 8s ease infinite; 
 
-  /* Overlay lines or grid */
   mask-image: linear-gradient(
       to right,
       rgba(255, 255, 255, 0.2) 1px,
