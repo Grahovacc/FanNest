@@ -28,7 +28,7 @@ body {
     #1f1f3a,
     #3e206d,
     #1f1f3a
-  ); /* Dark gradient */
+  ); 
   background-size: 200% 200%;
   animation: gradientShift 8s ease infinite; 
 
