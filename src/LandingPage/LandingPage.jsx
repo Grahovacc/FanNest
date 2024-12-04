@@ -105,7 +105,7 @@ function LandingPage() {
             )}
           </nav>
         </div>
-        {/* Overlay */}
+        
         <div
           className={`overlay ${isMenuOpen ? "visible" : ""}`}
           onClick={toggleMenu}
