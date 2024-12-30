@@ -67,7 +67,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 400px; /* Adjust height as needed */
-  background: linear-gradient(135deg, #0d0f23, #191d3a); /* Dark theme colors */
+  background: linear-gradient(135deg, #0d0f23, #191d3a); 
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
