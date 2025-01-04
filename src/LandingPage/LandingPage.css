@@ -107,7 +107,7 @@ body {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Button hover effect */
+
 .LaunchButton:hover {
   background-color: #6c3bc4;
   transform: scale(1.05);
