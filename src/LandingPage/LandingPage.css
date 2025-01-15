@@ -156,7 +156,7 @@ body {
     padding: 0 10px; /* Add smaller padding for mobile */
   }
 }
-/* Header */
+
 .header {
   width: 100vw; /* Full width */
   max-width: 100%; /* Ensure no overflow */
