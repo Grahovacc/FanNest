@@ -76,7 +76,6 @@ function LandingPage() {
             </button>
           )}
         </header>
-        {/* Hamburger Menu */}
         <div
           className={`slide-in-menu ${isMenuOpen ? "open" : ""}`}
           onTouchStart={handleTouchStart}
